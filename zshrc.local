@@ -1,0 +1,22 @@
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home"
+export M2_HOME="/usr/local/Cellar/maven/3.2.3/libexec"
+export JETTY_HOME="/Users/michaelcowgill/servers/jetty"
+export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1"
+
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$PATH:/usr/local/lib/node_modules"
+source $(brew --prefix nvm)/nvm.sh
+# use vim as the visual editor
+export VISUAL=vim
+export EDITOR=$VISUAL
+
+# use incremental search
+bindkey "^R" history-incremental-search-backward
+
+for alias in ~/.zsh/aliases/*.zsh; do
+  source $alias
+done
+
+for script in ~/.zsh/lib/*.zsh; do
+  source $script
+done
