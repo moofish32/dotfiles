@@ -16,10 +16,12 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
+	hookspath = $GIT_DIR/hooks
 [merge]
   ff = only
 [commit]
   template = ~/.gitmessage
+	gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -28,3 +30,9 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[hub]
+	host = github.intuit.com
+[gpg]
+	program = gpg
+[pull]
+	ff = only
